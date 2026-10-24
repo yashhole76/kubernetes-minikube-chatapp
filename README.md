@@ -15,6 +15,8 @@ A real-time chat application ("Chatt") containerized with Docker, pushed to Dock
 
 ![Architecture diagram](screenshots/Architecture.png)
 
+| Component | Image | Port | Kubernetes objects |
+
 ```
 | Component | Image | Port | Kubernetes objects |
 |---|---|---|---|
