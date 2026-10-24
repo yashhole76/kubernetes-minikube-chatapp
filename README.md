@@ -12,13 +12,7 @@ A real-time chat application ("Chatt") containerized with Docker, pushed to Dock
 ## Architecture
 
 ```
-Browser ──> port-forward :8081 ──> frontend Service (nginx :80)
-                                        │  /api, /socket.io
-                                        ▼
-                                  backend Service (Node.js :5001)
-                                        │
-                                        ▼
-                                  mongodb Service (:27017) ──> PVC (5Gi)
+![Architecture diagram](screenshots/k8s-chatapp-Architecture.png)
 ```
 
 | Component | Image | Port | Kubernetes objects |
