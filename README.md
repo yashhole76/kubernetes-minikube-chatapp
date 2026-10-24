@@ -5,7 +5,7 @@ Real-time chat app (React, Node.js, MongoDB) containerized with Docker and deplo
 
 A real-time chat application ("Chatt") containerized with Docker, pushed to Docker Hub, and deployed on a Minikube Kubernetes cluster running on an AWS EC2 Ubuntu instance.
 
-![Chat app working](screenshots/chat-app-working.png)
+![Chat app working](screenshots/01-chat-app-working.png)
 
 > The application source code and the original manifests come fromgithub. This repository documents my own build, deployment and troubleshooting of that app on Kubernetes.
 
@@ -80,7 +80,7 @@ docker build -t yash7689/chatapp-frontend:latest .
 docker push yash7689/chatapp-frontend:latest
 ```
 
-![Docker Hub](screenshots/dockerhub-images.png)
+![Docker Hub](screenshots/02-dockerhub-images.png)
 
 ### 2. Start the cluster
 
@@ -90,7 +90,7 @@ minikube start --driver=docker
 minikube status
 ```
 
-![Minikube status](screenshots/minikube-status.png)
+![Minikube status](screenshots/03-minikube-status.png)
 
 ### 3. Deploy to Kubernetes
 
@@ -105,9 +105,9 @@ kubectl get all -n chat-app
 
 All three pods should show `Running` with `1/1` ready.
 
-![kubectl get all](screenshots/kubectl-get-all.png)
+![kubectl get all](screenshots/04-kubectl-get-all.png)
 
-![PVC and secrets](screenshots/pvc-secrets.png)
+![PVC and secrets](screenshots/05-pvc-secrets.png)
 
 ### 4. Access the app
 
@@ -123,7 +123,7 @@ Backend logs confirm MongoDB is connected and socket clients are connecting:
 kubectl logs deploy/backend-deployment -n chat-app --tail=15
 ```
 
-![Backend logs](screenshots/backend-logs.png)
+![Backend logs](screenshots/06-backend-logs.png)
 
 ## Problems faced and how I fixed them
 
