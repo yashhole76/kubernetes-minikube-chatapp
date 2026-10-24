@@ -12,12 +12,10 @@ A real-time chat application ("Chatt") containerized with Docker, pushed to Dock
 ## Architecture
 
 ```
-## Architecture
 
 ![Architecture diagram](screenshots/Architecture.png)
 
 ```
-
 | Component | Image | Port | Kubernetes objects |
 |---|---|---|---|
 | Frontend (React build served by nginx) | `yash7689/chatapp-frontend` | 80 | Deployment + Service |
