@@ -63,8 +63,8 @@ Docker, Docker Hub, Kubernetes, Minikube, kubectl, AWS EC2 (Ubuntu), nginx, Node
 ### 1. Build and push the images
 
 ```bash
-git clone https://github.com/LondheShubham153/full-stack_chatApp.git
-docker login -u yash7689
+git clone https://github.com/full-stack_chatApp.git
+docker login 
 
 cd full-stack_chatApp/backend
 docker build -t yash7689/chatapp-backend:latest .
